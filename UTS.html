@@ -9,12 +9,14 @@
         .containerutama{
             width: 53%;
             height: 1000px;
-            position: relative;
+            left: 0;
+            position: fixed;
         }
         .containerutama1{
             width: 53%;
             height: 1000px;
             margin-left: 15%;
+            
         }
         .containerkecil{
             width: 100%;
@@ -114,39 +116,47 @@
             height: 100%;
             top: 0;
             left: 0;
-            position: fixed;
-            
-        }
-        .navbar1{
-            height: 100%;
-            width: 0;
-            z-index: 1;
-            top: 0;
-            left: 0;
-
-            
+            position: relative;
         }
         .navbarkecil{
             width: 100%;
             height: 5%;
             background-color: #ebe7e0;
         }
+        .navbarkecil1{
+            width: 0;
+            height: 0;
+            background-color: white;
+        }
         .navbarbesar{
             width: 100%;
             height: 95%;
             background-color: #44749d;
         }
+        .navbarbesar1{
+            width: 0;
+            height: 0;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar" id="navbar">
+        <div class="navbarkecil" id="navbarkecil">
+            <span style="font-size: 30px; cursor: pointer" onclick="closeNav()" >X</span>
+        </div>
+        <div class="navbarbesar" id="navbarbesar">
+
+        </div>
+    </div>
     <div class="containerterluar">
         <div class="containerutama" id="containerutama">
             <span style="font-size: 30px; cursor: pointer" onclick="openNav()" >&#9776;</span>
             <div class="containerkecil">
-                <div class="kotakkecil" id="cobaksi" onmouseup="divkelakuan1()" onmousedown="divkelakuan11()"></div>
-                <div class="kotakkecil" id="cobaksi1" onmouseup="divkelakuan2()" onmousedown="divkelakuan22()"></div>
-                <div class="kotakkecil" id="cobaksi2" onmouseup="divkelakuan3()" onmousedown="divkelakuan33()"></div>
-                <div class="kotakkecil" id="cobaksi3" onmouseup="divkelakuan4()" onmousedown="divkelakuan44()"></div>
+                <div class="kotakkecil" ></div>
+                <div class="kotakkecil"></div>
+                <div class="kotakkecil"></div>
+                <div class="kotakkecil"></div>
             </div>
             <div class="kotaktengah">
     
@@ -164,59 +174,25 @@
     
             </div>
         </div>
-    
     </div>
-    
-    <div class="navbar" id="navbar">
-        <div class="navbarkecil" >
-            <span style="font-size: 30px; cursor: pointer" onclick="closeNav()" >X</span>
-        </div>
-        <div class="navbarbesar">
 
-        </div>
-    </div>
+    
+   
 
     <script>
     function openNav(){
-    document.getElementById("navbar").className="navbar";
     document.getElementById("containerutama").className="containerutama1";
     document.getElementById("containersamping").className="containersamping1";
+    document.getElementById("navbarkecil").className="navbarkecil";
+    document.getElementById("navbarbesar").className="navbarbesar";
 
     }
     function closeNav(){
-    document.getElementById("navbar").className="navbar1";
     document.getElementById("containerutama").className="containerutama";
     document.getElementById("containersamping").className="containersamping";
+    document.getElementById("navbarkecil").className="navbarkecil1";
+    document.getElementById("navbarbesar").className="navbarbesar1";
 
-    }
-
-    function divkelakuan1(){
-    document.getElementById("cobaksi").className="kotakkecil";
-    }
-
-    function divkelakuan11(){
-        document.getElementById("cobaksi").className="aksi2";
-    }
-    function divkelakuan2(){
-    document.getElementById("cobaksi1").className="kotakkecil";
-    }
-
-    function divkelakuan22(){
-        document.getElementById("cobaksi1").className="aksi2";
-    }
-    function divkelakuan3(){
-    document.getElementById("cobaksi2").className="kotakkecil";
-    }
-
-    function divkelakuan33(){
-        document.getElementById("cobaksi2").className="aksi2";
-    }
-    function divkelakuan4(){
-    document.getElementById("cobaksi3").className="kotakkecil";
-    }
-
-    function divkelakuan44(){
-        document.getElementById("cobaksi3").className="aksi2";
     }
     </script>
 </body>
